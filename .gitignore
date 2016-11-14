@@ -6,3 +6,4 @@ gen
 
 # NodeSDT Resources
 app/node_modules/
+app/config/configdb.js

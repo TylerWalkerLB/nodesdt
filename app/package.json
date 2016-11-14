@@ -1,6 +1,6 @@
 {
   "name": "NodeSDT",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Site Data Tracking for use in Performance First Development",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Tyler Walker <@tylerwalkerlb>",
   "license": "MIT",
   "dependencies": {
+    "mongoose": "^4.6.7",
     "phantom": "^3.0.3",
     "phantomjs-prebuilt": "^2.1.13"
   }
