@@ -4,14 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.2-alpha] - 2016-11-14
+## [0.0.2-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.2-alpha) - 2016-11-14
 #### Removed
 - Dropped the use of MongoDB. After further research and consultation, ES will be the best solution for now
 #### Added
 - (ElasticSearch)[https://www.elastic.co/]
 - New structure to house util scripts in one directory
 
-## [0.0.1-alpha] - 2016-11-13
+## [0.0.1-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.1-alpha) - 2016-11-13
 #### Added
 - This CHANGELOG file to facilitate documentation of added project features
 - README now contains setup instructions
