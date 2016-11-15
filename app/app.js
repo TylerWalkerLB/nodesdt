@@ -1,23 +1,25 @@
-const PhantomCalls = require('./phantom/phantomjs-calls');
-const Promise = require('promise');
-const mongoose = require('mongoose');
-
 ;(function(){
-    // Connect to MongoDB
-    var mongoConfig = require('./config/configdb');
-    mongoose.connect(mongoConfig.url);
+    const PhantomCalls = require('./util/phantom/phantomjs-calls');
+    const Elastic = require('elasticsearch');
 
-    var db = mongoose.connection;
-    db.on('error', console.error.bind(console, 'connection error:'));
-    db.once('open', function() {
-        // we're connected!
-        console.log('connected')
+    // Connect to ElasticSearch client
+    var elasticController = require('./util/elasticsearch/elastic-controller');
+
+    // Create phantom-tests index
+    elasticController.createIndex('phantom-tests').then(response => {
+        console.log(response);
+    }).catch(error => {
+        console.log(error);
     });
 
-    var sdtSchema = mongoose.Schema;
 
-    PhantomCalls.getPageTimings('http://www.chadtylerwalker.com', 1200, 800).then(result => {
+    PhantomCalls.getPageTimings('http://chadtylerwalker.com', 1200, 800).then(result => {
         let allPageTimings = JSON.parse(result);
         console.log('Total time for page load:',allPageTimings[0].totalLoadTime);
+        console.log('Resources Requested', allPageTimings[0].page[0].resourceRequested.length);
+        console.log('Resources Received',allPageTimings[0].page[0].resourceReceived.length);
+        // console.log(result);
+    }).catch(error => {
+        console.log('Phantom error:', error);
     });
 })();

@@ -62,9 +62,11 @@ const getPageTimings = function(url, browserWidth = 1400, browserHeight = 900) {
                 //_page.render('chadtylerwalker_1.png');
                 response[0].endTime = Date.now();
                 response[0].totalLoadTime = response[0].endTime - response[0].startTime;
+                resolve(JSON.stringify(response));
                 _page.close();
                 _ph.exit();
-                resolve(JSON.stringify(response));
+            } else {
+                console.log("Error: Status:", status);
             }
         }).catch(console.error);
     });

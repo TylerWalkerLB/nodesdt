@@ -1,3 +1,4 @@
 module.exports = {
-    url: 'mongodb://localhost/nodesdt'
+    url: 'localhost:9200',
+    log: []
 };
