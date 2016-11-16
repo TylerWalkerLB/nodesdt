@@ -9,8 +9,8 @@
   "author": "Tyler Walker <@tylerwalkerlb>",
   "license": "MIT",
   "dependencies": {
-    "elasticsearch": "^12.0.1",
-    "phantom": "^3.0.3",
-    "phantomjs-prebuilt": "^2.1.13"
+    "elasticsearch": "~12.0.1",
+    "phantomjs-prebuilt": "~2.1.13",
+    "phantom": "~3.0.3"
   }
 }
