@@ -6,7 +6,7 @@
  *
  */
 ;(function(){
-    const PhantomCalls = require('./util/phantom/phantomjs-calls');
+    const PhantomCalls = require('./util/phantom/phantomjs-controller');
 
     // Connect to ElasticSearch client
     var elasticController = require('./util/elasticsearch/elastic-controller');
