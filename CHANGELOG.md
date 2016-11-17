@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.4-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.4-alpha) - 2016-11-15
+#### Added
+- Express.js to handle routing various HTTP requests
+
 ## [0.0.3-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.3-alpha) - 2016-11-15
 #### Added
 - Many functions to the elastic-controller to access to ES from any file
