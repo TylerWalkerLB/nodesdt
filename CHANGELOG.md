@@ -3,6 +3,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.5-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.5-alpha) - 2016-11-15
+#### Removed
+- Express.js
+ - The creators of Express moved on to create the next version of Express in a separate project called Koa
+#### Added
+- (Koa)[http://koajs.com/]
+ - A newer and less dependent version of Express. Out with the old and in with the new
+- (koa-router)[https://github.com/alexmingoia/koa-router]
+ - Middleware for Koa to provide routing
+- (koa-vhost)[https://github.com/Treri/koa-vhost]
+ - Virtual Host 
+
 ## [0.0.4-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.4-alpha) - 2016-11-15
 #### Added
 - Express.js to handle routing various HTTP requests

@@ -8,15 +8,35 @@
 ;(function(){
     const app = require('koa')();
     const router = require('./routes/api');
+    const vhost = require('koa-vhost');
+    const config = require('./config/config');
 
     /**
      * Node server setup
      */
-    app
-        .use(router.routes())
-        .use(router.allowedMethods())
-        .listen(3000, () => {
-        console.log('App listening on port 3000');
-    });
+    if (config.dev_mode) {
+        // Local server with vhost
+        app
+            .use(router.routes())
+
+            .use(router.allowedMethods())
+
+            .use(vhost(config.vhost, app))
+
+            .listen(config.port, () => {
+                console.log('App listening on port 3000');
+            });
+    } else {
+        app
+            .use(router.routes())
+
+            .use(router.allowedMethods())
+
+            .use(vhost(config.vhost, app))
+
+            .listen(config.port, () => {
+                console.log('App listening on port 3000');
+            });
+    }
 
 })();
