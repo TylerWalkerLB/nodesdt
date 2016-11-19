@@ -13,14 +13,14 @@
     const Elastic = require('elasticsearch');
 
     // include the db config
-    const dbConfig = require('../../config/configdb');
+    const appConfig = require('../../config/config');
 
     /**
      * Connects to the ES Client
      */
     var esClient = new Elastic.Client({
-        host: dbConfig.url,
-        log: dbConfig.log
+        host: appConfig.elastic_search_url,
+        log: appConfig.elastic_search_log
     });
 
     /**
