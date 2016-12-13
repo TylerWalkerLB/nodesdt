@@ -1,34 +1,35 @@
-;(function(){
-    // Dependencies
-    const PhantomCalls = require('../util/phantom/phantomjs-controller');
-    const ElasticController = require('../util/elasticsearch/elastic-controller');
+// Dependencies
+import PhantomController from '../util/phantom/phantomjs-controller';
+import ElasticController from '../util/elasticsearch/elastic-controller';
+import koaRouter from 'koa-router';
+import 'babel-polyfill';
 
-    //var app = require('koa');
-    let router = require('koa-router')();
+//var app = require('koa');
+//let router = koaRouter();
 
-    router
+const router = koaRouter();
 
-        .get('/', function*() {
-            this.body = 'welcome ya filthy animal';
-        })
+router
 
-        .get('/embed', function*() {
-            console.log('API is working');
-            this.body = 'embed reached';
-        })
+    .get('/', function*() {
+        this.body = 'welcome ya filthy animal';
+    })
 
-        .get('/phantom', function*() {
+    .get('/embed', function*() {
+        console.log('API is working');
+        this.body = 'embed route reached';
+    })
 
-            ElasticController.clientInfo().then(response => {
-                console.log(response);
-            });
+    .get('/phantom', function*() {
 
-            PhantomCalls.getPageLoadData('http://heifer.org/').then(response => {
-                console.log(response);
-            });
-
+        ElasticController.clientInfo().then(response => {
+            console.log(response);
         });
 
-    // Modules
-    module.exports = router;
-})();
+        PhantomController.getPageLoadData('http://heifer.org/').then(response => {
+            console.log(response);
+        });
+
+    });
+
+export { router as default }

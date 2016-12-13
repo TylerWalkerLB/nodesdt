@@ -5,8 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-
 
+#### Removed
+- All instances of `module.exports`. All exports are now handled with ES6 export/import
+
 #### Added
 - Renamed _api.js_ to _routes-main.js_ to allow for easier file naming structure as we progress into a larger routing system
+- Babel dependencies for building ES2015 compatible import and export
+- New build script in npm that builds the app in directory _/lib_
 
 
 ## [0.0.5-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.5-alpha) - 2016-11-15
