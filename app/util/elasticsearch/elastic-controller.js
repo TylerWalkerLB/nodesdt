@@ -11,8 +11,6 @@
 
 ;(function(){
     const Elastic = require('elasticsearch');
-
-    // include the db config
     const appConfig = require('../../config/config');
 
     /**

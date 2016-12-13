@@ -4,7 +4,7 @@
     const ElasticController = require('../util/elasticsearch/elastic-controller');
 
     //var app = require('koa');
-    var router = require('koa-router')();
+    let router = require('koa-router')();
 
     router
 

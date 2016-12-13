@@ -34,6 +34,7 @@
 
             .use(router.allowedMethods())
 
+            // TODO: Hook this up for production deployment
             .use(vhost(config.vhost, app))
 
             .listen(config.port, () => {
