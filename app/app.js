@@ -7,12 +7,14 @@
  */
 ;(function(){
     const app = require('koa')();
-    const router = require('./routes/api');
+    const router = require('./routes/routes-main');
     const vhost = require('koa-vhost');
     const config = require('./config/config');
 
     /**
      * Node server setup
+     *
+     * Checks if app is in development mode, then sets up a server with Koa
      */
     if (config.dev_mode) {
         // Local server with vhost
