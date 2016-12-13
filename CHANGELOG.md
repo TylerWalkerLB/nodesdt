@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-
+## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-12-13
 
 #### Removed
 - All instances of `module.exports`. All exports are now handled with ES6 export/import
