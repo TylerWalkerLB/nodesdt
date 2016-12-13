@@ -50,3 +50,6 @@ The actual application is ran inside a folder created by babel. When a change is
 
 1. Run `npm run build` in the project root directory
 2. Restart your application inside _lib/_
+
+## Embedding client script
+Inside _project_resources/_, there is a sample script _client.js_. Copy the contents of this file and paste them at the top of the `<body>` element.

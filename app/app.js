@@ -9,6 +9,8 @@ import Koa from 'koa';
 import router from './routes/routes-main';
 import vhost from 'koa-vhost';
 import config from './config/config';
+import serve from 'koa-serve';
+import path from 'path';
 
 const app = Koa();
 
@@ -20,10 +22,13 @@ const app = Koa();
 if (config.dev_mode) {
     // Local server with vhost
     app
+        // Main Router
         .use(router.routes())
-
         .use(router.allowedMethods())
 
+        .use(serve('tracking', path.join(__dirname, '..')))
+
+        // Virtual host listener
         .use(vhost(config.vhost, app))
 
         .listen(config.port, () => {

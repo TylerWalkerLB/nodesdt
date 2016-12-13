@@ -1,0 +1,8 @@
+<script>
+var sdt = document.createElement('script');
+sdt.type = 'text/javascript';
+sdt.async = true;
+sdt.src = 'http://nodesdt.dev:3000/tracking/client.js';
+var sdtn = document.getElementsByTagName('script')[0];
+sdtn.parentNode.insertBefore(sdt, sdtn);
+</script>

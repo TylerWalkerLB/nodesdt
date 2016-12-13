@@ -1,12 +1,9 @@
 // Dependencies
-import PhantomController from '../util/phantom/phantomjs-controller';
-import ElasticController from '../util/elasticsearch/elastic-controller';
+import * as PhantomController from '../util/phantom/phantomjs-controller';
+import * as ElasticController from '../util/elasticsearch/elastic-controller';
 import koaRouter from 'koa-router';
-import embedRoutes from './routes-embed';
+import embedRouter from './routes-embed';
 import 'babel-polyfill';
-
-//var app = require('koa');
-//let router = koaRouter();
 
 const router = koaRouter();
 
@@ -28,8 +25,7 @@ router
 
     })
 
-    .use(embedRoutes.routes())
-
-    .use(embedRoutes.allowedMethods());
+    .use(embedRouter.routes())
+    .use(embedRouter.allowedMethods());
 
 export { router as default }

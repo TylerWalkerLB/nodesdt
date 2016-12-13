@@ -11,6 +11,7 @@
 
 import Elastic from 'elasticsearch';
 import appConfig from '../../config/config';
+import 'babel-polyfill';
 
 /**
  * Connects to the ES Client

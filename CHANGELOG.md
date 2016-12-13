@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 #### Added
 - Moved embed routes to a new file _routes-embed.js_
+- (koa-serve)[https://github.com/adamkdean/koa-serve]
+- Script to be embedded on a site that will include the _client.js_ script that builds out a query string containing window.performance.timing data and attaches it to an image request
+- _client.js_ script that builds out an image request with query parameters
+- Embed routes has a path that will intercept an image request, access the query parameters, then redirect to the correct image path
+- Can now serve files located in the _tracking/_ directory
 
 ## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-12-13
 
