@@ -3,23 +3,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-12-13
+## [0.0.7-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.7-alpha) - 2016-12-
 
-#### Removed
-- All instances of `module.exports`. All exports are now handled with ES6 export/import
+#### Added
+- Moved embed routes to a new file _routes-embed.js_
+
+## [0.0.6-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.6-alpha) - 2016-12-13
 
 #### Added
 - Renamed _api.js_ to _routes-main.js_ to allow for easier file naming structure as we progress into a larger routing system
 - Babel dependencies for building ES2015 compatible import and export
 - New build script in npm that builds the app in directory _/lib_
 
+#### Removed
+- All instances of `module.exports`. All exports are now handled with ES6 export/import
 
 ## [0.0.5-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.5-alpha) - 2016-11-15
 
-#### Removed
-- Express.js
- - The creators of Express moved on to create the next version of Express in a separate project called Koa
- 
 #### Added
 - (Koa)[http://koajs.com/]
  - A newer and less dependent version of Express. Out with the old and in with the new
@@ -28,6 +28,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - (koa-vhost)[https://github.com/Treri/koa-vhost]
  - Virtual Host 
 
+#### Removed
+- Express.js
+ - The creators of Express moved on to create the next version of Express in a separate project called Koa
 
 ## [0.0.4-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.4-alpha) - 2016-11-15
 
@@ -44,13 +47,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [0.0.2-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.2-alpha) - 2016-11-14
 
-#### Removed
-- Dropped the use of MongoDB. After further research and consultation, ES will be the best solution for now
-
 #### Added
 - (ElasticSearch)[https://www.elastic.co/]
 - New structure to house util scripts in one directory
 
+#### Removed
+- Dropped the use of MongoDB. After further research and consultation, ES will be the best solution for now
 
 ## [0.0.1-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.1-alpha) - 2016-11-13
 
