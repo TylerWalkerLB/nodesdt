@@ -3,10 +3,11 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.8-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.8-alpha) - 2017-01-
+## [0.0.8-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.8-alpha) - 2017-01-18
 
 #### Added
 - [Mongoose](http://mongoosejs.com/index.html)
+- _mongodb-controller.js_ to be used as the controller for using Mongoose and MongoDB
 
 ## [0.0.7-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.7-alpha) - 2016-12-13
 
