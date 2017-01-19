@@ -3,11 +3,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.0.7-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.7-alpha) - 2016-12-
+## [0.0.8-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.8-alpha) - 2017-01-
+
+#### Added
+- [Mongoose](http://mongoosejs.com/index.html)
+
+## [0.0.7-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.7-alpha) - 2016-12-13
 
 #### Added
 - Moved embed routes to a new file _routes-embed.js_
-- (koa-serve)[https://github.com/adamkdean/koa-serve]
+- [koa-serve](https://github.com/adamkdean/koa-serve)
 - Script to be embedded on a site that will include the _client.js_ script that builds out a query string containing window.performance.timing data and attaches it to an image request
 - _client.js_ script that builds out an image request with query parameters
 - Embed routes has a path that will intercept an image request, access the query parameters, then redirect to the correct image path
@@ -26,11 +31,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [0.0.5-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.5-alpha) - 2016-11-15
 
 #### Added
-- (Koa)[http://koajs.com/]
+- [Koa](http://koajs.com/)
  - A newer and less dependent version of Express. Out with the old and in with the new
-- (koa-router)[https://github.com/alexmingoia/koa-router]
+- [koa-router](https://github.com/alexmingoia/koa-router)
  - Middleware for Koa to provide routing
-- (koa-vhost)[https://github.com/Treri/koa-vhost]
+- [koa-vhost](https://github.com/Treri/koa-vhost)
  - Virtual Host 
 
 #### Removed
@@ -53,7 +58,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [0.0.2-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.2-alpha) - 2016-11-14
 
 #### Added
-- (ElasticSearch)[https://www.elastic.co/]
+- [ElasticSearch](https://www.elastic.co/)
 - New structure to house util scripts in one directory
 
 #### Removed
