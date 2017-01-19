@@ -1,7 +1,0 @@
-export default {
-    port: 3000,
-    dev_mode: true,
-    vhost: 'nodesdt.dev',
-    elastic_search_url: 'localhost:9200',
-    elastic_search_log: []
-};
