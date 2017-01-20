@@ -1,15 +1,18 @@
 import koaRouter from 'koa-router';
 import 'babel-polyfill';
+import 'babel-preset-react';
 
 const dashboardRouter = koaRouter();
 
-dashboardRouter
+// Pages
+import Login from '../dashboard/login';
 
+dashboardRouter
 
     .redirect('/dashboard', '/dashboard/login')
 
     .all('/dashboard/login', function*() {
-        this.body = 'Dashboard login';
+        this.body = Login();
     })
 
     .all('/dashboard/admin', function*() {
