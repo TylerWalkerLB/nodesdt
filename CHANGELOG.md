@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 #### Added
 - [Mongoose](http://mongoosejs.com/index.html)
 - _mongodb-controller.js_ to be used as the controller for using Mongoose and MongoDB
+- Moved all the controllers to one directory _util/controllers_ to help with file structure consistancy
+- Added React as a project dependency
+- Client Dashboard will be located within this project, so:
+ - Set up a _routes-dashboard.js_ to define routes for these views
+ - Redirected all requests to `/` to `/dashboard` which will eventually take a user to a login screen
 
 ## [0.0.7-alpha](https://github.com/TylerWalkerLB/nodesdt/releases/tag/v0.0.7-alpha) - 2016-12-13
 

@@ -37,8 +37,9 @@ if (config.dev_mode) {
 } else {
     app
         .use(router.routes())
-
         .use(router.allowedMethods())
+
+        .use(serve('tracking', path.join(__dirname, '..')))
 
         // TODO: Hook this up for production deployment
         .use(vhost(config.vhost, app))

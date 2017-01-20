@@ -20,14 +20,23 @@ import 'babel-polyfill';
 mongoose.connect(appConfig.mongo_url);
 
 /**
- * Set constant for MongoDB connection
+ * Return a connection to the MongoDB client
  *
- * @type {*}
+ * @returns {Promise}
  */
-const conn = mongoose.connection;
-conn.on('connected', function() {
-    console.log('Successfully connected to MongoDB')
-});
+function connectToMongo() {
+    return new Promise((resolve,reject) => {
+        let conn = mongoose.connection;
+
+        conn.on('error', function(err) {
+            reject(new Error(err));
+        });
+
+        conn.on('connected', function() {
+            resolve(conn);
+        });
+    });
+}
 
 /**
  * Schema for the 'User' model
@@ -75,7 +84,7 @@ function hashPassword(password) {
                     reject(new Error(err));
                 }
 
-               resolve(hash);
+                resolve(hash);
             });
         });
     });

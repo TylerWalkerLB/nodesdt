@@ -1,17 +1,17 @@
 // Dependencies
-import * as PhantomController from '../util/phantom/phantomjs-controller';
-import * as ElasticController from '../util/elasticsearch/elastic-controller';
+import * as PhantomController from '../util/controllers/phantomjs-controller';
+import * as ElasticController from '../util/controllers/elastic-controller';
 import koaRouter from 'koa-router';
 import embedRouter from './routes-embed';
+import dashboardRouter from './routes-dashboard';
 import 'babel-polyfill';
 
 const router = koaRouter();
 
 router
 
-    .get('/', function*() {
-        this.body = 'welcome ya filthy animal';
-    })
+    // Redirect all request to the root into the /dashboard path
+    .redirect('/', '/dashboard')
 
     .get('/phantom', function*() {
 
@@ -26,6 +26,9 @@ router
     })
 
     .use(embedRouter.routes())
-    .use(embedRouter.allowedMethods());
+    .use(embedRouter.allowedMethods())
+
+    .use(dashboardRouter.routes())
+    .use(dashboardRouter.allowedMethods());
 
 export { router as default }

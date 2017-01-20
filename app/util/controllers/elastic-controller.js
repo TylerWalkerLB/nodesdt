@@ -1,12 +1,12 @@
 /*
-* ElasticSearch Controller
-*
-* Description: This script provides access to the ElasticSearch client from any view and many elastic functions through modules
-*
-* References:
-* https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html
-* https://www.npmjs.com/package/elasticsearch
-*
+ * ElasticSearch Controller
+ *
+ * Description: This script provides access to the ElasticSearch client from any view and many elastic functions through modules
+ *
+ * References:
+ * https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html
+ * https://www.npmjs.com/package/elasticsearch
+ *
  */
 
 import Elastic from 'elasticsearch';
