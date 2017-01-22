@@ -8,10 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 #### Added
 - [Mongoose](http://mongoosejs.com/index.html)
 - _mongodb-controller.js_ to be used as the controller for using Mongoose and MongoDB
-- Moved all the controllers to one directory _util/controllers_ to help with file structure consistancy
+- Moved all the controllers to one directory _util/controllers_ to help with file structure consistency
 - Added [React](https://facebook.github.io/react/) as a project dependency
 - Added [ReactDOM](https://www.npmjs.com/package/react-dom) as a dependency
 - Added [Babel Preset React](https://www.npmjs.com/package/babel-preset-react) as a dependency
+- Template building will be handled with [co](https://github.com/tj/co) and [co-views](https://github.com/tj/co-views)
 - Client Dashboard will be located within this project, so:
  - Set up a _routes-dashboard.js_ to define routes for these views
  - Redirected all requests to `/` to `/dashboard` which will eventually take a user to a login screen

@@ -22,6 +22,7 @@ const app = Koa();
 if (config.dev_mode) {
     // Local server with vhost
     app
+
         // Main Router
         .use(router.routes())
         .use(router.allowedMethods())
