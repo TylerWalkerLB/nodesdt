@@ -3,7 +3,7 @@ import 'babel-polyfill';
 
 let headerWrapper = (
     <div>
-        <h2>NodeSDT Dashboard!!</h2>
+        <h2>Whitetail Dashboard</h2>
     </div>
 );
 
