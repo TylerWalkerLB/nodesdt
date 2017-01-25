@@ -6,11 +6,16 @@
  *
  */
 import React from 'react';
+import ReactDOM from 'react-dom/server';
 import 'babel-polyfill';
 
 // Components
 import Header from '../navigation/header';
 
-export default function renderPage() {
-    return React.createElement(Header);
+export default class Login extends React.Component {
+    render() {
+        return (
+                <Header />
+        );
+    }
 }

@@ -42,10 +42,6 @@ function connectToMongo() {
  * Schema for the 'User' model
  */
 let userSchema = mongoose.Schema({
-    username: {
-        type: 'string',
-        index: true
-    },
     password: {
         type: 'string'
     },
@@ -120,12 +116,10 @@ export function createUser(newUser) {
                 if (err) {
                     reject(new Error(err));
                 }
-
                 resolve(userToAdd);
             });
 
         }).catch(err => {
-            console.log(err);
             reject(new Error(err));
         });
     });
@@ -135,15 +129,15 @@ export function createUser(newUser) {
  * Find an existing user in the Mongo 'User' model and return user document
  * Mongoose API: http://mongoosejs.com/docs/api.html#query_Query-findOne
  *
- * @param username
+ * @param email
  * @returns {Promise}
  */
-export function getUserByUsername(username) {
+export function getUserByEmail(email) {
 
     return new Promise((resolve, reject) => {
 
         let query = User.where({
-            username: username
+            email: email
         });
 
         query.findOne(function (err, user) {
